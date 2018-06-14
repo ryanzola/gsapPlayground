@@ -9,8 +9,84 @@
 </head>
 <body>
   <svg class="svg-canvas">
-    <path class="heart" d="M10 0 h20 v10 h10 v-10 h20 v10 h10 v20 h-10 v10 h-10 v10 h-10 v10 h-10 v-10 h-10 v-10 h-10 v-10 h-10 v-20 h10 v-10 Z" />
+    <defs>
+      <mask id="liquidMask">
+        <path class="liquid" d="M10 120 h10 v-10 h70 v10 h20 v30 h-10 v10 h-90 v-10 h-10 v-20 h10 v-10Z" fill="#fff"/>
+        <g id="bubbleGroup" fill="#000">
+            <rect height="10" width="10" x="20" y="180" />
+            <rect height="10" width="10" x="90" y="180" />
+            <rect height="10" width="10" x="40" y="180" />
+            <rect height="10" width="10" x="70" y="180" />
+            <rect height="10" width="10" x="50" y="180" />
+          </g>
+      </mask>
+      <pattern id="grassPattern" height="160" width="160" x="0" y="0" patternUnits="userSpaceOnUse">
+          <rect height="160" width="160"/>
+          <rect height="10" width="160" />
+          <path d="M0 10 v110 h10 v-10 h10 v10 h10 v20 h10 v-10 h10  v-30 h10 v20 h10 v10 h20 v-10 h10 v-10 h10 v10 h10 v10 h10 v-10 h10 v-20 h10 v30 h10 v-120 h-160Z" fill="#88D800" />
+          <path d="M0 150 h10 v-20 h10 v10 h10 v10 h10 v-10 h10 v-10 h10 v10 h10 v10 h20 v-10 h10 v-10 h10 v10 h10 v10 h10 v-10 h10 v-10 h10 v10 h10 v-10 h-10 v-30 h-10 v20 h-10 v10 h-10 v-10 h-10 v-10 h-10 v10 h-10 v10 h-20 v-10 h-10 v-20 h-10 v30 h-10 v10 h-10 v-20 h-10 v-10 h-10 v10 h-10 v30 
+                    M20 40 h20 v10 h10 v-20 h10 v20 h10 v-10 h20 v10 h-10 v10 h-10 v10 h-30 v-10 h-10 v-10 h-10 v-10
+                    M120 20 h10 v10 h10 v-10 h10 v10 h-10 v10 h-10 v-10 h-10 v-10" fill="#0D9300" />
+      </pattern>
+    </defs>
+    <!-- <g class="heart" height="90" width="90">
+      <path class="outline" d="M 0 10 h-10 v30 h10 v10 h10 v10 h10 v10 h10 v10 h10 v-10 h10 v-10 h10 v-10 h10 v-10 h10 v-30 h-10 v-10 h-10 v-10 h-20 v10 h-10 v-10 h-20 v10 h-10 v10 h10 v-10 h20 v10 h10 v-10 h20 v10 h10 v30 h-10 v10 h-10 v10 h-10 v10 h-10 v-10 h-10 v-10 h-10 v-10 h-10 v-30Z"/>
+      <path class="fill" d="M10 0 h20 v10 h10 v-10 h20 v10 h10 v30 h-10 v10 h-10 v10 h-10 v10 h-10 v-10 h-10 v-10 h-10 v-10 h-10 v-30 h10Z"/>
+      <path class="shine" d="M10 10 h10 v10 h-10 v-10Z"/>
+      <path class="shadow" d="M0 40 v-10 h10 v10 h10 v10 h10 v10 h10 v-10 h10 v-10 h10 v-10 h10 v10 h-10 v10 h-10 v10 h-10 v10 h-10 v-10 h-10 v-10 h-10 v-10 h-10" fill="maroon" />
+    </g>
+
+    <g class="rupie" height="160" width="100">
+      <path class="jade" d="M20 50 h10 v-10 h10 v-10 h10 v-10 h20 v10 h10 v10 h10 v10 h10 v80 h-10 v10 h-10 v10 h-10 v10 h-20 v-10 h-10 v-10 h-10 v-10 h-10 v-80Z" fill="#12F13B"/>
+      <path class="shine" d="M20 50 v70 h10 v-10 h10 v10 h10 v10 h30 v-10 h-30 v-10 h-10 v-50 h-10 v-10 h10 v10 h10 v-10 h10 v-30 h-10 v10 h-10 v10 h-10 v10 h-10Z"/>
+      <path class="outline" d="M 50 10 h20 v10 h10 v10 h10 v10 h10 v10 h10 v80 h-10 v10 h-10 v10 h-10 v10 h-10 v10 h-20 v-10 h-10 v-10 h-10 v-10 h-10 v-10 h-10 v-80 h10 v-10 h10 v-10 h10 v-10 h10 v10 h-10 v10 h-10 v10 h-10 v80 h10 v10 h10 v10 h10 v10 h20 v-10 h10 v-10 h10 v-10 h-10 v-10 h-10 v10 h-10 v-10 h10 v-60 h-10 v-10 h10 v10 h10 v-10 h10 v10 h-10 v60 h10 v10 h10 v-80 h-10 v-10 h-10 v-10 h-10 v-10 h-20 v-10" />
+    </g> -->
+    
+    <g class="scene">
+      <rect class="grass" height="160" width="800" fill="url(#grassPattern)" stroke="black"/>
+
+    </g>
+
+    <g class="subject">
+      <!-- <g class="luigi" height="320" width="160">
+        <path d="M 0 70 h10 v-10 h10 v-10 h10 v-10 h10 v-10 h10 v-10 h40 v10 h10 v20 h20 v10 h10 v10 h-10 v30 h10 v20 h10 v10 h-20 v10 h-10 v10 h10 v30 h-10 v10 h10 v20 h10 v50 h-10 v10 h-10 v20 h-10 v20 h10 v20 h-70 v-30 h-10 v-10 h-10 v-10 h10 v-20 h-10 v-60 h-10 v-30 h-10 v-50 h-10 v-40 h10 v-10" fill="#24188C"/>
+        <path d="M20 60 h10 v-10 h10 v-10 h10 v-10 h40 v20 h-20 v10 h-20 v10 h-10 v10 h-10 v-10 h-10 v-10
+                  M20 120 h10 v20 h10 v20 h10 v20 h10 v30 h-10 v10 h-10 v10 h-10 v-30 h-10 v-30 h-10 v-40 h10 v-10
+                  M100 150 h10 v30 h-10 v10 h10 v30 h-10 v-10 h-10 v-20 h-10 v-10 h20 v-10 h-10 v-10 h10 v-10
+                  M30 280 h10 v10 h-10 v-10 
+                  M50 300 h40 v10 h10 v10 h-50 v-20" fill="#4CDC48" 
+        />
+        <path d="M-10 90 h10 v-10 h30 v10 h10 v10 h-10 v10 h-10 v10 h-20 v-10 h-10 v-20
+                  M50 80 h10 v-10 h10 v30 h10 v-30 h20 v10 h10 v10 h-10 v-10 h-10 v20 h30 v20 h-10 v10 h-20 v-10 h-10 v-10 h-10 v10 h-10 v10 h20 v10 h20 v10 h-10 v10 h-10 v10 h-20 v-10 h-10 v-20 h-10 v-20 h10 v-10 h10 v-10 h-10 v-20
+                  M70 220 h20 v20 h-20 v-20 M 110 220 h10 v20 h-10 v-20" fill="#FCBCB0" 
+        />
+        <g id="eyes" fill="#fff">
+          <rect height="10" width="10" x="70" y="70" />
+          <rect height="10" width="10" x="90" y="70" />
+        </g>
+      </g> -->
+    
+      <g class="potion" height="160" width="140" x="0" y="0">
+        <g id="liquidGroup" mask="url(#liquidMask")>
+          <path class="liquid" d="M10 120 h10 v-10 h70 v10 h20 v30 h-10 v10 h-90 v-10 h-10 v-20 h10 v-10Z" fill="#BD4400"/>
+        </g>
+        <g id="fizz" fill="#BD4400">
+          <rect height="10" width="10" x="50" y="130" />
+          <rect height="10" width="10" x="60" y="130" />
+        </g>
+        <path class="shine" d="M40 20 h10 v10 h-10 v-10 M50 40 h10 v40 h-10 v10 h-10 v10 h50 v10 h10 v10 h-10 v-10 h-70 v10 h-10 v10 h-10 v-10 h10 v-10 h10 v-10 h10 v-10 h10 v-10 h10 v-40Z" fill="#222"/>
+        <path class="outline" d="M0 120 v-10 h10 v-10 h10 v-10 h10 v-10 h10 v-50 h-10 v-10 h10 v-10 h40 v10 h10 v10 h-10 v50 h10 v10 h10 v10 h10 v10 h10 v10 h10 v30 h-10 v10 h-10 v10 h-100 v-10 h-10 v-10 h-10 v-30 h10 v30 h10 v10 h90 v-10 h10 v-30 h-10 v-10 h-10 v-10 h-10 v-10 h-10 v-60 h10 v-10 h-40 v10 h30 v10 h-20 v40 h-10 v10 h-10 v10 h-10 v10 h-10 v10 h-10Z" />
+      </g>
+    </g>
   </svg>
+
+  <div class="container" id="container">
+    <img class="luigiImg" src="../assets/luigi.png">
+  </div>
+
+  <div class="plant-container">
+    <img  class="plant" src="../assets/plant.png">
+  </div>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="./app.bundle.js"></script>

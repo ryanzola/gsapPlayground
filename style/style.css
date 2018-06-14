@@ -13,16 +13,37 @@ body {
   width: 100vw;
   padding: 0;
   margin: 0;
+  background-color: #3cbcfd;
 }
 
 .svg-canvas {
   height: 100%;
   width: 100%;
+  position: absolute;
+  z-index: 2;
+
 }
 
-.heart {
+.outline {
+  fill: #000;
+}
+
+.shine {
+  fill: #fff;
+  opacity: 0.9
+}
+
+.heart .fill {
   fill: red;
-  stroke: transparent;
-  transform: translate(50%, 50%);
-  transform-origin: center center;
+}
+
+.container {
+  overflow: hidden;
+  width: 169px;
+}
+
+.plant-container {
+  transform-origin: left bottom;
+  overflow: hidden;
+  width: 159px;
 }
